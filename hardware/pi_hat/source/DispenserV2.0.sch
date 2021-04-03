@@ -13162,14 +13162,14 @@ THIS SOFTWARE IS PROVIDED BY THE CONTRIBUTORS "AS IS" AND WITHOUT ANY EXPRESS OR
 <part name="SUPPLY11" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J2" library="SparkFun-Connectors" deviceset="CONN_04" device=""/>
-<part name="J5" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:6240597/1"/>
 <part name="SUPPLY5" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND4" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="J1" library="SparkFun-Connectors" deviceset="CONN_03" device="" value="455-1750-1-ND"/>
 <part name="SUPPLY6" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="J4" library="SparkFun-Connectors" deviceset="CONN_03" device="SCREW"/>
+<part name="J1" library="SparkFun-Connectors" deviceset="CONN_02" device="3.5MM"/>
 </parts>
 <sheets>
 <sheet>
@@ -13256,10 +13256,6 @@ THIS SOFTWARE IS PROVIDED BY THE CONTRIBUTORS "AS IS" AND WITHOUT ANY EXPRESS OR
 <attribute name="VALUE" x="218.44" y="169.926" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="218.44" y="154.432" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="J5" gate="G$1" x="30.48" y="187.96" smashed="yes">
-<attribute name="VALUE" x="27.94" y="183.134" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="27.94" y="193.548" size="1.778" layer="95" font="vector"/>
-</instance>
 <instance part="SUPPLY3" gate="G$1" x="40.64" y="193.04" smashed="yes">
 <attribute name="VALUE" x="40.64" y="195.834" size="1.778" layer="96" align="bottom-center"/>
 </instance>
@@ -13276,12 +13272,16 @@ THIS SOFTWARE IS PROVIDED BY THE CONTRIBUTORS "AS IS" AND WITHOUT ANY EXPRESS OR
 <instance part="GND4" gate="1" x="40.64" y="152.4" smashed="yes">
 <attribute name="VALUE" x="40.64" y="152.146" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="J1" gate="J$1" x="30.48" y="160.02" smashed="yes">
+<instance part="SUPPLY6" gate="G$1" x="40.64" y="165.1" smashed="yes">
+<attribute name="VALUE" x="40.64" y="167.894" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="J4" gate="J$1" x="30.48" y="160.02" smashed="yes">
 <attribute name="VALUE" x="27.94" y="152.654" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="27.94" y="165.608" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="SUPPLY6" gate="G$1" x="40.64" y="165.1" smashed="yes">
-<attribute name="VALUE" x="40.64" y="167.894" size="1.778" layer="96" align="bottom-center"/>
+<instance part="J1" gate="G$1" x="30.48" y="187.96" smashed="yes">
+<attribute name="VALUE" x="27.94" y="183.134" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="27.94" y="193.548" size="1.778" layer="95" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -13325,12 +13325,6 @@ THIS SOFTWARE IS PROVIDED BY THE CONTRIBUTORS "AS IS" AND WITHOUT ANY EXPRESS OR
 <junction x="121.92" y="60.96"/>
 </segment>
 <segment>
-<pinref part="J3" gate="G$1" pin="2"/>
-<pinref part="GND16" gate="1" pin="GND"/>
-<wire x1="38.1" y1="139.7" x2="43.18" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="139.7" x2="43.18" y2="124.46" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="C6" gate="G$1" pin="-"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="50.8" y1="127" x2="50.8" y2="124.46" width="0.1524" layer="91"/>
@@ -13366,16 +13360,22 @@ THIS SOFTWARE IS PROVIDED BY THE CONTRIBUTORS "AS IS" AND WITHOUT ANY EXPRESS OR
 <wire x1="208.28" y1="142.24" x2="208.28" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J5" gate="G$1" pin="1"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="38.1" y1="187.96" x2="40.64" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="187.96" x2="40.64" y2="185.42" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="38.1" y1="157.48" x2="40.64" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="40.64" y1="157.48" x2="40.64" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="J1" gate="J$1" pin="1"/>
+<pinref part="J4" gate="J$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="1"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="38.1" y1="137.16" x2="43.18" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="137.16" x2="43.18" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="V_USB" class="0">
@@ -13427,27 +13427,27 @@ THIS SOFTWARE IS PROVIDED BY THE CONTRIBUTORS "AS IS" AND WITHOUT ANY EXPRESS OR
 <wire x1="48.26" y1="177.8" x2="48.26" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J5" gate="G$1" pin="2"/>
 <wire x1="38.1" y1="190.5" x2="40.64" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="SUPPLY3" gate="G$1" pin="3.3V"/>
 <wire x1="40.64" y1="193.04" x2="40.64" y2="190.5" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="J1" gate="J$1" pin="3"/>
 <wire x1="38.1" y1="162.56" x2="40.64" y2="162.56" width="0.1524" layer="91"/>
 <pinref part="SUPPLY6" gate="G$1" pin="3.3V"/>
 <wire x1="40.64" y1="162.56" x2="40.64" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="J4" gate="J$1" pin="3"/>
 </segment>
 </net>
 <net name="12V" class="0">
 <segment>
-<pinref part="J3" gate="G$1" pin="1"/>
-<wire x1="38.1" y1="137.16" x2="50.8" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="+"/>
-<wire x1="50.8" y1="134.62" x2="50.8" y2="137.16" width="0.1524" layer="91"/>
-<junction x="50.8" y="137.16"/>
 <pinref part="SUPPLY1" gate="G$1" pin="12V"/>
-<wire x1="50.8" y1="142.24" x2="50.8" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="142.24" x2="50.8" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="J3" gate="G$1" pin="2"/>
+<wire x1="50.8" y1="139.7" x2="50.8" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="139.7" x2="50.8" y2="139.7" width="0.1524" layer="91"/>
+<junction x="50.8" y="139.7"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VMOT"/>
@@ -13593,7 +13593,7 @@ THIS SOFTWARE IS PROVIDED BY THE CONTRIBUTORS "AS IS" AND WITHOUT ANY EXPRESS OR
 <wire x1="48.26" y1="160.02" x2="53.34" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="162.56" x2="48.26" y2="160.02" width="0.1524" layer="91"/>
 <junction x="48.26" y="160.02"/>
-<pinref part="J1" gate="J$1" pin="2"/>
+<pinref part="J4" gate="J$1" pin="2"/>
 </segment>
 </net>
 </nets>
