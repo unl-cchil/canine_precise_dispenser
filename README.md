@@ -1,5 +1,5 @@
 # Raspberry Pi controlled precise treat dispenser
-**This project provides the source for a custom, precise canine treat dispenser designed for numerical discrimination tasks.**
+**This project provides the source for a precise canine treat dispenser designed for numerical discrimination tasks.**
 
 ### Overview
 
