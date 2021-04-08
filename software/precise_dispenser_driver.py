@@ -17,11 +17,12 @@ class PreciseDispenser:
     """
     A simple class definition to interact with the canine treat dispenser.
     """
-    def __init__(self, loaded_treats=59, timeout=1):
+    def __init__(self, loaded_treats=59, timeout=1, version="BB"):
         """Initializer for the canine treat dispenser, configures control variables and Pi GPIO.
 
         :param loaded_treats: The number of treats that are loaded into the dispenser for this session.  Defaults to max, 59 treats.
         :param timeout: The amount of time before the dispenser throw an error between dispensation events
+        :param version: The HAT version that is being used, "BB" for breadboard and "P" for production
         :returns: None.
         """
         # Set control variables
@@ -29,9 +30,17 @@ class PreciseDispenser:
         self.dispensing_timeout = timeout
         self.dispensing_start = 0
         # Setup pin definitions
-        self.TREAT = 18
-        self.DIR = 22
-        self.STEP = 23
+        if version == "BB":
+            self.TREAT = 18
+            self.DIR = 22
+            self.STEP = 23
+        elif version == "P":
+            self.ENABLE = 25
+            self.RESET = 8
+            self.SLEEP = 7
+            self.STEP = 12
+            self.DIR = 16
+            self.BREAK = 20
         # Configure pins
         gpio.setmode(gpio.BCM)
         gpio.setup(self.DIR, gpio.OUT)
@@ -44,7 +53,7 @@ class PreciseDispenser:
         self.dispensing = False
 
     def dispense_treat(self):
-        """Function to dispense a single treat.  Should not be used, use dispense_treats for error handling.
+        """Function to dispense a single treat.  Should not be used directly, use dispense_treats for error handling.
 
         :returns: True for successful dispensation of a single treat, False for a failure to dispense the treat.
         """
