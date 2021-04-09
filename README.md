@@ -3,6 +3,19 @@
 
 ### Overview
 
+### Interfacing Example
+```
+from precise_dispenser_driver import PreciseDispenser
+
+dispenser = PreciseDispenser()
+try:
+	dispenser.dispense_treats(10)
+	print(“Successfully dispensed ten treats.”)
+except ValueError as e:
+	print(e)
+dispenser.close()
+```
+
 ### License
 
 The software and hardware designs are available under a [Creative Commons Attribution-ShareAlike 4.0 International Public License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/). You are free to:
