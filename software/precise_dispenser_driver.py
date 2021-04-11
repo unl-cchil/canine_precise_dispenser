@@ -17,7 +17,7 @@ class PreciseDispenser:
     """
     A simple class definition to interact with the canine treat dispenser.
     """
-    def __init__(self, loaded_treats=59, timeout=1, version="BB"):
+    def __init__(self, loaded_treats=59, timeout=3, version="BB"):
         """Initializer for the canine treat dispenser, configures control variables and Pi GPIO.
 
         :param loaded_treats: The number of treats that are loaded into the dispenser for this session.  Defaults to max, 59 treats.
@@ -82,7 +82,7 @@ class PreciseDispenser:
                 num_treats -= 1
                 self.loaded_treats -= 1
             else:
-                raise ValueError("Treat was unable to dispense, check for jams!")
+                raise ValueError("Treat was unable to dispense, {0} treats remaining with {1} treats in jogger, check for jams!".format(num_treats, self.loaded_treats))
 
     def treat_dispensed(self, channel):
         """A callback function for when a treat is dispensed.  This is detected on the falling edge of the IR break beam.
