@@ -42494,10 +42494,10 @@ M84 X Y E ;Disable all steppers but Z
 M82 ;absolute extrusion mode
 M104 S0
 ;End of Gcode
-;SETTING_3 {"global_quality": "[general]\\nversion = 4\\nname = Normal #2\\ndefi
-;SETTING_3 nition = SV01\\n\\n[metadata]\\nquality_type = fast\\nsetting_version
-;SETTING_3  = 16\\ntype = quality_changes\\n\\n[values]\\nadhesion_type = none\\
-;SETTING_3 nsupport_enable = True\\n\\n", "extruder_quality": ["[general]\\nvers
-;SETTING_3 ion = 4\\nname = Normal #2\\ndefinition = SV01\\n\\n[metadata]\\nqual
-;SETTING_3 ity_type = fast\\nsetting_version = 16\\nposition = 0\\ntype = qualit
-;SETTING_3 y_changes\\n\\n[values]\\ninfill_sparse_density = 15\\n\\n"]}
+;SETTING_3 {"extruder_quality": ["[general]\\nversion = 4\\nname = Normal #2\\nd
+;SETTING_3 efinition = SV01\\n\\n[metadata]\\ntype = quality_changes\\nquality_t
+;SETTING_3 ype = fast\\nsetting_version = 16\\nposition = 0\\n\\n[values]\\ninfi
+;SETTING_3 ll_sparse_density = 15\\n\\n"], "global_quality": "[general]\\nversio
+;SETTING_3 n = 4\\nname = Normal #2\\ndefinition = SV01\\n\\n[metadata]\\ntype =
+;SETTING_3  quality_changes\\nquality_type = fast\\nsetting_version = 16\\n\\n[v
+;SETTING_3 alues]\\nadhesion_type = none\\nsupport_enable = True\\n\\n"}
