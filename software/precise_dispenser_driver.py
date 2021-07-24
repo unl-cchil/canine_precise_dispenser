@@ -26,31 +26,43 @@ class PreciseDispenser:
         :returns: None.
         """
         # Set control variables
+        self.step_width = 0.1
         self.loaded_treats = loaded_treats
         self.dispensing_timeout = timeout
         self.dispensing_start = 0
         # Setup pin definitions
-        if version == "BB":
-            self.TREAT = 18
-            self.DIR = 22
-            self.STEP = 23
-        elif version == "P":
-            self.ENABLE = 25
-            self.RESET = 8
-            self.SLEEP = 7
-            self.STEP = 12
-            self.DIR = 16
-            self.BREAK = 20
+        self.ENABLE = 24
+        self.RESET = 23
+        self.SLEEP = 22
+        self.STEP = 18
+        self.DIR = 27
+        self.TREAT = 17
         # Configure pins
         gpio.setmode(gpio.BCM)
         gpio.setup(self.DIR, gpio.OUT)
         gpio.setup(self.STEP, gpio.OUT)
-        gpio.setup(self.TREAT, gpio.IN)
+        gpio.setup(self.TREAT, gpio.IN, pull_up_down=gpio.PUD_UP)
+        gpio.setup(self.ENABLE, gpio.OUT)
+        gpio.setup(self.RESET, gpio.OUT)
+        gpio.setup(self.SLEEP, gpio.OUT)
         # Set outputs and trigger events
-        gpio.add_event_detect(self.TREAT, gpio.FALLING, callback=self.treat_dispensed, bouncetime=100)
+        gpio.add_event_detect(self.TREAT, gpio.BOTH, callback=self.treat_dispensed, bouncetime=100)
         gpio.output(self.DIR, gpio.LOW)
+        gpio.output(self.ENABLE, gpio.LOW)
+        gpio.output(self.RESET, gpio.HIGH)
+        gpio.output(self.SLEEP, gpio.HIGH)
         # Initialize the dispensing variable to False
         self.dispensing = False
+        # Setup STEP PWM
+        self.pwm_channel = gpio.PWM(self.STEP, 5)
+        self.pwm_channel.start(0)
+
+     def forward_step(self, steps):
+        for i in range(0, steps):
+            gpio.output(self.STEP, gpio.HIGH)
+            time.sleep(0.1)
+            gpio.output(self.STEP, gpio.LOW)
+            time.sleep(0.1)
 
     def dispense_treat(self):
         """Function to dispense a single treat.  Should not be used directly, use dispense_treats for error handling.
@@ -59,13 +71,12 @@ class PreciseDispenser:
         """
         self.dispensing = True
         self.start = time.time()
+        self.pwm_channel.ChangeDutyCycle(50)
         while self.dispensing == True:
-            gpio.output(self.STEP, gpio.HIGH)
-            time.sleep(0.1)
-            gpio.output(self.STEP, gpio.LOW)
-            time.sleep(0.1)
             if time.time() - self.start > self.dispensing_timeout:
+                self.pwm_channel.ChangeDutyCycle(0)
                 return False
+        self.pwm_channel.ChangeDutyCycle(0)
         return True
 
     def dispense_treats(self, num_treats):
@@ -98,6 +109,8 @@ class PreciseDispenser:
 
         :returns: None.
         """
+        self.pwm_channel.stop()
+        gpio.remove_event_detect(self.TREAT)
         gpio.cleanup()
 
     
