@@ -3,6 +3,9 @@
 
 ### Overview
 
+### Raspberry Pi Image
+The SD card image for the Raspberry Pi has all dependencies installed and only needs to have its access point configured using pi-ap.  The image can be found [here](https://drive.google.com/file/d/1r1gbtBNyjnHum-6QpTX6uGOvL8lcQ7Pt/view?usp=sharing).  Use an SD card flasher to write this image to a bootable media, such as balenaEtcher, Win32DiskImager, or other similar software.
+
 ### Interfacing Example
 ```
 from precise_dispenser_driver import PreciseDispenser
