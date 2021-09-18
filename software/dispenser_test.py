@@ -10,3 +10,4 @@ for i in range(1, 11):
     except ValueError as e:
         print(e)
     time.sleep(3)
+dispenser.close()
