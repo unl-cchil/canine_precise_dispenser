@@ -1,6 +1,7 @@
 # Raspberry Pi controlled precise treat dispenser
 **This project provides the source for a precise canine treat dispenser designed for numerical discrimination tasks.**
 
+![Precise Dispenser](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/documentation/figures/Dispenser%20v84_image.png "Precise Dispenser")
 ### Overview
 For detailed overview, review the [user guide](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/documentation/user_guide/unl_cchil_precise_dispenser_guide.pdf).  The basic operating principles of the dispenser can be seen in the embedded video below, where seven treats are dispensed twice.
 
