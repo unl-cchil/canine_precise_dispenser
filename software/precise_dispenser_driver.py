@@ -98,7 +98,7 @@ class PreciseDispenser:
         if num_treats > self.loaded_treats:
             raise ValueError("Not enough treats remaining to dispense {0} treats!".format(num_treats))
         while num_treats is not 0:
-            if (self.dispense_treat()):
+            if self.dispense_treat():
                 num_treats -= 1
                 self.loaded_treats -= 1
             else:
