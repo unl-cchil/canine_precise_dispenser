@@ -2,8 +2,11 @@
 **This project provides the source for a precise canine treat dispenser designed for numerical discrimination tasks.**
 
 ### Overview
+For detailed overview, review the [user guide](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/documentation/user_guide/unl_cchil_precise_dispenser_guide.pdf).  The basic operating principles of the dispenser can be seen in the embedded video below.
 
 https://user-images.githubusercontent.com/22334349/143482424-4f7f6dd4-f7b3-43dc-927e-87879f6ca861.MOV
+
+By using the embedded Python library in the Raspberry Pi image, which is also included in this repository, the stepper motor can be controlled to position the treat holes over the pellet exhaust, leading to a dispensation.  By chaining these events together, a specified quantity of treats can be dispensed.  Additionally, the image is configured with a working build of PsychoPy (v3.2.4).
 
 ### Raspberry Pi Image
 The SD card image for the Raspberry Pi has all dependencies installed and only needs to have its access point configured using pi-ap.  The image can be found [here](https://drive.google.com/file/d/1r1gbtBNyjnHum-6QpTX6uGOvL8lcQ7Pt/view?usp=sharing).  Use an SD card flasher to write this image to a bootable media, such as balenaEtcher, Win32DiskImager, or other similar software.
