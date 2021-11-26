@@ -2,7 +2,7 @@
 **This project provides the source for a precise canine treat dispenser designed for numerical discrimination tasks.**
 
 ### Overview
-For detailed overview, review the [user guide](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/documentation/user_guide/unl_cchil_precise_dispenser_guide.pdf).  The basic operating principles of the dispenser can be seen in the embedded video below.
+For detailed overview, review the [user guide](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/documentation/user_guide/unl_cchil_precise_dispenser_guide.pdf).  The basic operating principles of the dispenser can be seen in the embedded video below, where seven treats are dispensed twice.
 
 https://user-images.githubusercontent.com/22334349/143482424-4f7f6dd4-f7b3-43dc-927e-87879f6ca861.MOV
 
