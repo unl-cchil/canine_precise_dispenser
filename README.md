@@ -3,7 +3,7 @@
 
 ![Precise Dispenser](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/documentation/figures/Dispenser%20v84_image.png "Precise Dispenser")
 ### Overview
-For detailed overview, review the [user guide](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/documentation/user_guide/unl_cchil_precise_dispenser_guide.pdf).  The basic operating principles of the dispenser can be seen in our [YouTube demo video](https://www.youtube.com/watch?v=fIKlNvzwXUY).
+For detailed overview, review the [user guide](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/documentation/user_guide/unl_cchil_precise_dispenser_guide.pdf).  The basic operating principles of the dispenser can be seen in our [YouTube demo video](https://www.youtube.com/watch?v=fIKlNvzwXUY) or in [this embedded video](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/hardware/dispenser/operation/show_dispenser_video.md).
 
 By using the embedded Python library in the Raspberry Pi image, which is also included in this repository, the stepper motor can be controlled to position the treat holes over the pellet exhaust, leading to a dispensation.  By chaining these events together, a specified quantity of treats can be dispensed.  Additionally, the image is configured with a working build of PsychoPy (v3.2.4).
 
