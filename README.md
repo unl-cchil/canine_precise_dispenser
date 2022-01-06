@@ -25,15 +25,11 @@ dispenser.close()
 
 ### License
 
-The software and hardware designs are available under a [Creative Commons Attribution-ShareAlike 4.0 International Public License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/). You are free to:
+The hardware is available under a [CERN-OHL-S-2.0 license](https://spdx.org/licenses/CERN-OHL-S-2.0.html), found [here](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/HWLICENSE.md).
 
-* Share — copy and redistribute the material in any medium or format
-* Adapt — remix, transform, and build upon the material for any purpose, even commercially.
+The software is available under an [MIT license](https://opensource.org/licenses/MIT), found [here](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/SWLICENSE.md).
 
-Under the following terms:
-
-* Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-* ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+The documentation is available under a [Creative Commons Attribution-ShareAlike 4.0 International Public License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/), found [here](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/LICENSE.md).
 
 
 ### Contact
@@ -77,7 +73,49 @@ engines such as <a href="https://g.co/datasetsearch">Google Dataset Search</a>.
 <td><code itemprop="citation">TBA</code></td>
 </tr>
 <tr>
-<td>license</td>
+<td>hw license</td>
+<td>
+<div itemscope itemtype="http://schema.org/CreativeWork" itemprop="license">
+<table>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+<tr>
+<td>name</td>
+<td><code itemprop="name">CERN-OHL-S-2.0</code></td>
+</tr>
+<tr>
+<td>url</td>
+<td><code itemprop="url">https://spdx.org/licenses/CERN-OHL-S-2.0.html</code></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>sw license</td>
+<td>
+<div itemscope itemtype="http://schema.org/CreativeWork" itemprop="license">
+<table>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+<tr>
+<td>name</td>
+<td><code itemprop="name">MIT</code></td>
+</tr>
+<tr>
+<td>url</td>
+<td><code itemprop="url">https://opensource.org/licenses/MIT</code></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>docs license</td>
 <td>
 <div itemscope itemtype="http://schema.org/CreativeWork" itemprop="license">
 <table>
