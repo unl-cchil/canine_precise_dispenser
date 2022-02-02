@@ -37,7 +37,7 @@ The documentation is available under a [Creative Commons Attribution-ShareAlike 
 This project was conducted by the [Canine Cognition and Human Interaction Lab](https://dogcog.unl.edu). For questions, please contact the developer Walker Arce (warce@unomaha.edu) or the principal investigator Jeffrey R. Stevens (jeffrey.r.stevens@gmail.com).
 
 ### Citation
-Arce, W., & Stevens, J. R. (2021). A precise dispenser design for canine cognition research. https://github.com/unl-cchil/canine_precise_dispenser
+Arce, W., and Stevens, J. R. (2022). A precise dispenser design for canine cognition research. _Journal of Open Hardware_, 6(1), 2. http://doi.org/10.5334/joh.41
 
 ### Funding
 This research was supported by a National Science Foundation grant (SES-1658837) and a University of Nebraska-Lincoln Research Council Grant-in-Aid to JRS.
