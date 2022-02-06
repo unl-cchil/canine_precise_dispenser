@@ -24,16 +24,16 @@ dispenser.close()
 ```
 
 ### License
-
 The hardware is available under a [CERN-OHL-S-2.0 license](https://spdx.org/licenses/CERN-OHL-S-2.0.html), found [here](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/HWLICENSE.md).
 
 The software is available under an [MIT license](https://opensource.org/licenses/MIT), found [here](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/SWLICENSE.md).
 
 The documentation is available under a [Creative Commons Attribution-ShareAlike 4.0 International Public License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/), found [here](https://github.com/unl-cchil/canine_precise_dispenser/blob/main/LICENSE.md).
 
+### Project Mentions
+[Hackaday](https://hackaday.com/2022/02/06/open-hardware-dog-treat-dispenser-is-a-stepping-stone-for-behavioral-research/)
 
 ### Contact
-
 This project was conducted by the [Canine Cognition and Human Interaction Lab](https://dogcog.unl.edu). For questions, please contact the developer Walker Arce (warce@unomaha.edu) or the principal investigator Jeffrey R. Stevens (jeffrey.r.stevens@gmail.com).
 
 ### Citation
