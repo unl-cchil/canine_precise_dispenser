@@ -57,7 +57,7 @@ engines such as <a href="https://g.co/datasetsearch">Google Dataset Search</a>.
 </tr>
 <tr>
 <td>description</td>
-<td><code itemprop="description">The dataset from the paper [A precise dispenser design for canine cognition research](TBA). We tested five treat dispensers 100 times each with 10 tests of increasing dispensing targets from 1 to 10 treats. Each row of the data file gives the expected and actual number of treats dispensed for a single trial.</code></td>
+<td><code itemprop="description">The dataset from the paper [A precise dispenser design for canine cognition research](http://doi.org/10.5334/joh.41). We tested five treat dispensers 100 times each with 10 tests of increasing dispensing targets from 1 to 10 treats. Each row of the data file gives the expected and actual number of treats dispensed for a single trial.</code></td>
 </tr>
 </tr>
 <tr>
